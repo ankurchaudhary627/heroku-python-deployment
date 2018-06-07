@@ -2,90 +2,85 @@
 
 ### Steps to Deploy your ChatBot to heroku
 
-1. Make a new folder in which all the required files will be present.
+- Make a new folder in which all the required files will be present.
 
-2. Copy your python script to this folder.
+- Copy your python script to this folder.
 
-3. Open cmd/terminal and navigate to this folder.
+- Open cmd/terminal and navigate to this folder.
 
-4. To deploy to heroku we need to create python virtual environment. So make a virtual environment folder using the command :
+- To deploy to heroku we need to create python virtual environment. So make a virtual environment folder using the command :
 
   ```
   virtualenv YOUR_FOLDER_NAME
   ```
   
-5. Activate the virtual environment by :
+- Activate the virtual environment by :
 
-  - For linux :
-  ```
-  source YOUR_FOLDER_NAME/bin/activate
-  ```
-  - For windows:
-  ```
-  YOUR-FOLDER-NAME\Scripts\activate
-  ```
+      - For linux :
+      ```
+      source YOUR_FOLDER_NAME/bin/activate
+      ```
+      - For windows:
+      ```
+      YOUR-FOLDER-NAME\Scripts\activate
+      ```
   
-6. Install the gunicorn [Gunicorn](https://en.wikipedia.org/wiki/Gunicorn) and flask modules for deploying to heroku  :
+- Install the gunicorn [Gunicorn](https://en.wikipedia.org/wiki/Gunicorn) and flask modules for deploying to heroku  :
 
   ```
   pip install gunicorn flask
   ```
   
-7. You need to install other required modules which are used by your python script in the same way.
+- You need to install other required modules which are used by your python script in the same way.
 
-8. Now we need to create requirements.txt file from cmd/terminal :
+- Now we need to create requirements.txt file from cmd/terminal :
 
   ```
   pip freeze>requirements.txt
   ```
   
-9. Create a procfile :
+- Create a procfile :
   
-  - Windows :
-  ```
-  echo web: gunicorn YOUR_PYTHON_SCRIPT_NAME : YOUR_FLASK_APP_NAME > Procfile
-  ```
-  - Linux :
-  ```
-  web: gunicorn YOUR_PYTHON_SCRIPT_NAME : YOUR_FLASK_APP_NAME
-  ```
+      - Windows :
+      ```
+      echo web: gunicorn YOUR_PYTHON_SCRIPT_NAME : YOUR_FLASK_APP_NAME > Procfile
+      ```
+      - Linux :
+      ```
+      web: gunicorn YOUR_PYTHON_SCRIPT_NAME : YOUR_FLASK_APP_NAME
+      ```
   
-10. To test on localhost run the python script and goto [localhost](https://127.0.0.1:5000)
+- To test on localhost run the python script and goto [localhost](https://127.0.0.1:5000)
 
-11. Above steps were to create all the necessary files required by heroku.
+- Above steps were to create all the necessary files required by heroku.
 
-12. In order to deploy to heroku, first you need to create a heroku account [Heroku](https://www.heroku.com/) and download [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+- In order to deploy to heroku, first you need to create a heroku account [Heroku](https://www.heroku.com/) and download [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 
-13. After creating your heroku account and installing heroku CLI, create a new heroku app from their web UI.
+- After creating your heroku account and installing heroku CLI, create a new heroku app from their web UI.
 
-14.  Login to your account through cmd/terminal using :
+-  Login to your account through cmd/terminal using :
 
   ```
   heroku login
   ```
-15. If you are not in your project folder then navigate to your project folder. Now create a new git repo using :
+- If you are not in your project folder then navigate to your project folder. Now create a new git repo using :
 
   ```
-  git init
-  
+  git init  
   heroku git:remote -a YOUR_HEROKU_APP_NAME
-  
-  # Deploy your application
-  
-  git add .
-  
-  git commit -am "commiting a change"
-  
+  # Deploy your application  
+  git add .  
+  git commit -am "commiting a change"  
   git push heroku master
   ```
   
-16. Scaling dynos [Read here](https://stackoverflow.com/questions/30318369/can-someone-explain-heroku-psscale-web-1) :
+- Scaling dynos [Read here](https://stackoverflow.com/questions/30318369/can-someone-explain-heroku-psscale-web-1) :
 
   ```
   heroku ps:scale web=1
   ```
   
-17. To open the website :
+- To open the website :
 
   ```
   heroku open
