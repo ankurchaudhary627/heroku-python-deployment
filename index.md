@@ -16,18 +16,10 @@
   
 - Activate the virtual environment by :
 
-     - For linux :
+     - For linux : ``` source YOUR_FOLDER_NAME/bin/activate ```
       
-      ```
-      source YOUR_FOLDER_NAME/bin/activate
-      ```
-      
-     - For windows:
+     - For windows: ``` YOUR-FOLDER-NAME\Scripts\activate ```
      
-      ```
-      YOUR-FOLDER-NAME\Scripts\activate
-      ```
-  
 - Install the [Gunicorn](https://en.wikipedia.org/wiki/Gunicorn) and [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework)) modules for deploying to heroku  :
 
   ```
@@ -44,16 +36,9 @@
   
 - Create a procfile :
   
-     - Windows :
-      
-      ```
-      echo web: gunicorn YOUR_PYTHON_SCRIPT_NAME : YOUR_FLASK_APP_NAME > Procfile
-      ```
-      
-     - Linux :
-      ```
-      web: gunicorn YOUR_PYTHON_SCRIPT_NAME : YOUR_FLASK_APP_NAME
-      ```
+     - Windows : ``` echo web: gunicorn YOUR_PYTHON_SCRIPT_NAME : YOUR_FLASK_APP_NAME > Procfile ```
+           
+     - Linux : ``` web: gunicorn YOUR_PYTHON_SCRIPT_NAME : YOUR_FLASK_APP_NAME ```
   
 - To test on localhost run the python script and goto [localhost](https://127.0.0.1:5000)
 
@@ -114,4 +99,4 @@
   
 ### Contact
   
-  Ping me on Gmail for any query: _ankurchaudhary627@gmail.com_
+  Ping me on Gmail for any query: ankurchaudhary627@gmail.com
