@@ -16,16 +16,19 @@
   
 - Activate the virtual environment by :
 
-      - For linux :
+     - For linux :
+      
       ```
       source YOUR_FOLDER_NAME/bin/activate
       ```
-      - For windows:
+      
+     - For windows:
+     
       ```
       YOUR-FOLDER-NAME\Scripts\activate
       ```
   
-- Install the gunicorn [Gunicorn](https://en.wikipedia.org/wiki/Gunicorn) and flask modules for deploying to heroku  :
+- Install the [Gunicorn](https://en.wikipedia.org/wiki/Gunicorn) and [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework)) modules for deploying to heroku  :
 
   ```
   pip install gunicorn flask
@@ -41,11 +44,13 @@
   
 - Create a procfile :
   
-      - Windows :
+     - Windows :
+      
       ```
       echo web: gunicorn YOUR_PYTHON_SCRIPT_NAME : YOUR_FLASK_APP_NAME > Procfile
       ```
-      - Linux :
+      
+     - Linux :
       ```
       web: gunicorn YOUR_PYTHON_SCRIPT_NAME : YOUR_FLASK_APP_NAME
       ```
@@ -68,6 +73,7 @@
   ```
   git init  
   heroku git:remote -a YOUR_HEROKU_APP_NAME
+  
   # Deploy your application  
   git add .  
   git commit -am "commiting a change"  
@@ -108,4 +114,4 @@
   
 ### Contact
   
-  Ping me on Gmail for any query: **ankurchaudhary627@gmail.com**
+  Ping me on Gmail for any query: _ankurchaudhary627@gmail.com_
