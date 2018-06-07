@@ -9,6 +9,7 @@
 3. Open cmd/terminal and navigate to this folder.
 
 4. To deploy to heroku we need to create python virtual environment. So make a virtual environment folder using the command :
+
   ```
   virtualenv YOUR_FOLDER_NAME
   ```
@@ -25,6 +26,7 @@
   ```
   
 6. Install the gunicorn [Gunicorn](https://en.wikipedia.org/wiki/Gunicorn) and flask modules for deploying to heroku  :
+
   ```
   pip install gunicorn flask
   ```
@@ -32,6 +34,7 @@
 7. You need to install other required modules which are used by your python script in the same way.
 
 8. Now we need to create requirements.txt file from cmd/terminal :
+
   ```
   pip freeze>requirements.txt
   ```
@@ -56,10 +59,12 @@
 13. After creating your heroku account and installing heroku CLI, create a new heroku app from their web UI.
 
 14.  Login to your account through cmd/terminal using :
+
   ```
   heroku login
   ```
 15. If you are not in your project folder then navigate to your project folder. Now create a new git repo using :
+
   ```
   git init
   
@@ -75,11 +80,13 @@
   ```
   
 16. Scaling dynos [Read here](https://stackoverflow.com/questions/30318369/can-someone-explain-heroku-psscale-web-1) :
+
   ```
   heroku ps:scale web=1
   ```
   
 17. To open the website :
+
   ```
   heroku open
   ```
@@ -87,13 +94,17 @@
 ### Creating Telegram Webhook
 
   - Goto this link and change: **heroku_web_app_url** to your heroku web-app's url :
+  
   ```
   https://api.telegram.org/bot<bot-token>/setWebhook?url=<heroku_web_app_url>
   ```
+  
   - You should see something like this in your web browser:
+  
   ```
   {"ok":true,"result":true,"description":"Webhook was set"}
   ```
+  
 ### Useful Links
 
   [Link 1](https://progblog.io/How-to-deploy-a-Flask-App-to-Heroku/)
