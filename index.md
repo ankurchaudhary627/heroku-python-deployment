@@ -2,7 +2,7 @@
 
 Steps to Deploy your ChatBot to heroku :
 
--List
+- List
 
 Make a new folder in which all the required files will be present.
 
