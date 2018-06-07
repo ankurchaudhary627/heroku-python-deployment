@@ -12,6 +12,7 @@
   ```
   virtualenv YOUR_FOLDER_NAME
   ```
+  
 5. Activate the virtual environment by :
 
   - For linux :
@@ -22,16 +23,19 @@
   ```
   YOUR-FOLDER-NAME\Scripts\activate
   ```
+  
 6. Install the gunicorn [Gunicorn](https://en.wikipedia.org/wiki/Gunicorn) and flask modules for deploying to heroku  :
   ```
   pip install gunicorn flask
   ```
+  
 7. You need to install other required modules which are used by your python script in the same way.
 
 8. Now we need to create requirements.txt file from cmd/terminal :
   ```
   pip freeze>requirements.txt
   ```
+  
 9. Create a procfile :
   
   - Windows :
@@ -42,6 +46,7 @@
   ```
   web: gunicorn YOUR_PYTHON_SCRIPT_NAME : YOUR_FLASK_APP_NAME
   ```
+  
 10. To test on localhost run the python script and goto [localhost](https://127.0.0.1:5000)
 
 11. Above steps were to create all the necessary files required by heroku.
@@ -57,21 +62,28 @@
 15. If you are not in your project folder then navigate to your project folder. Now create a new git repo using :
   ```
   git init
+  
   heroku git:remote -a YOUR_HEROKU_APP_NAME
   
   # Deploy your application
+  
   git add .
+  
   git commit -am "commiting a change"
+  
   git push heroku master
   ```
+  
 16. Scaling dynos [Read here](https://stackoverflow.com/questions/30318369/can-someone-explain-heroku-psscale-web-1) :
   ```
   heroku ps:scale web=1
   ```
+  
 17. To open the website :
   ```
   heroku open
   ```
+  
 ### Creating Telegram Webhook
 
   - Goto this link and change: **heroku_web_app_url** to your heroku web-app's url :
