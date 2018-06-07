@@ -1,1 +1,1 @@
-My blog
+My first blog. Do check it out!
